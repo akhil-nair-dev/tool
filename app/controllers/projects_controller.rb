@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   
   def new
     @project = current_user.projects.build
-    @teams = Team.where('id = ?', current_user.team_id)
+    @teams = Team.where('id = ?', current_user.team_ids)
   end
 
   

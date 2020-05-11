@@ -4,7 +4,7 @@
       data: {
         id: @team.id,
         team: @team.to_json(except: [:id, :created_at, :update_at]),
-        users_attributes: @team.users.to_json(except: [:created_at, :update_at])
+        users_attributes: @team.user_id.to_json(except: [:created_at, :update_at])
       } do %>
 
   <div class="column is-5" :class="{ formstatic: scrollPosition < 100, formfixed: scrollPosition > 100 }">

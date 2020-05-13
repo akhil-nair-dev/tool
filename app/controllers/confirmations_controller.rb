@@ -1,5 +1,5 @@
 class ConfirmationsController < Devise::ConfirmationsController
-	skip_before_action :verify_authenticity_token
+	
 	 def update
     with_unconfirmed_confirmable do
       if @confirmable.has_no_password?

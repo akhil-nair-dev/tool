@@ -7,13 +7,12 @@
 
 <div class="content">
   <h2 class="title is-4">Invite users</h2>
-  <p>Invite users to create an account and join this team. Each user will be sent a confirmation email in which they can supply their own unique password.</p>
+  <p>Invite users to create an account and join this team.</p>
 </div>
 
 <div v-for="(user, index) in team.users_attributes">
   <div v-if="user._destroy =='1'">
     {{ user.name }} will be removed.
-    <button v-on:click="undoRemove(index)" class="button is-small">Undo</button>
   </div>
   <div v-else>
     <div class="field">

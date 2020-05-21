@@ -10,10 +10,6 @@
   <p>Invite users to create an account and join this team.</p>
 </div>
 
-<div v-for="(user, index) in team.users_attributes">
-  <div v-if="user._destroy =='1'">
-    {{ user.name }} will be removed.
-  </div>
   <div v-else>
     <div class="field">
       <div class="control">
@@ -26,14 +22,11 @@
       <div class="control">
         <label class="label">Email</label>
         <input type="text" class="input" v-model="user.email" />
-        <div id="errors" class="has-text-danger" v-if="errors.length">{{ errors }}</div>
+        
       </div>
     </div>
     <input type="hidden" value="<%= current_user.id %>" />
     <div class="field">
-      <div class="control">
-        <button v-on:click="removeUser(index)" class="button is-small">Remove</button>
-      </div>
     </div>
   </div>
   <hr />
